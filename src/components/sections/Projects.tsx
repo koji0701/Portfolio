@@ -1,5 +1,9 @@
 import { BackgroundGradient, TextReveal } from "../ui/aceternity";
 
+const currentProjects = [
+  
+]
+
 const projects = [
   {
     title: "Project Alpha",
