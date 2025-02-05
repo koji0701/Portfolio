@@ -114,7 +114,7 @@ export default function Work() {
                     key={link}
                     onClick={() => setSelectedTab(link)}
                     className={cn(
-                      "p-3 text-base font-mono cursor-pointer transition-colors",
+                      "p-3 text-base cursor-pointer transition-colors",
                       selectedTab === link ? "bg-indigo-950/50 text-indigo-400" : "text-gray-400 hover:text-white"
                     )}
                   >
@@ -132,7 +132,7 @@ export default function Work() {
                   <h3 className="text-2xl font-bold text-indigo-400">{selectedExperience.company}</h3>
                 </div>
                 
-                <p className="text-lg text-gray-400 mb-6 font-mono">
+                <p className="text-lg text-gray-400 mb-6">
                   {selectedExperience.duration}
                 </p>
   
