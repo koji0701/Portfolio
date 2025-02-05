@@ -9,19 +9,19 @@ const projects = [
     title: "Bear Eats",
     description: "Macro tracker & meal planner for WashU dining",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
-    link: "#"
+    link: "https://github.com/koji0701/BearEats"
   },
   {
     title: "Issho",
     description: "Strava for student productivity",
     image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2370&auto=format&fit=crop",
-    link: "#"
+    link: "https://github.com/koji0701/Issho"
   },
   {
     title: "Community of Hope",
     description: "Mobile app that connects St. Louis community mentors with teenage moms; built for Community of Hope nonprofit",
     image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2371&auto=format&fit=crop",
-    link: "#"
+    link: "https://github.com/SamLubelsky/CommunityOfHope"
   }
 ];export default function Projects() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
