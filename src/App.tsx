@@ -4,6 +4,7 @@ import Hero from './components/sections/Hero';
 import Projects from './components/sections/Projects';
 import Skills from './components/sections/Skills';
 import Work from './components/sections/Work';
+import About from './components/sections/about';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={
             <>
               <Hero />
+              <About />
               <Work />
               <Projects />
               <Skills />
