@@ -78,7 +78,7 @@ const workHistory: WorkHistoryType = {
 };
 
 export default function Work() {
-    const [selectedTab, setSelectedTab] = useState<string>("WURocketry");
+    const [selectedTab, setSelectedTab] = useState<string>("AI Research");
     const sidebarLinks = Object.keys(workHistory);
     const selectedExperience = workHistory[selectedTab];
   

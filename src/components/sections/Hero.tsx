@@ -31,7 +31,7 @@ export default function Hero() {
         </TextReveal>
 
         <TextReveal>
-          <h2 className="text-2xl md:text-3xl text-neutral-300 mb-8">
+          <h2 className="text-2xl md:text-2xl text-neutral-300 mb-8">
             Full Stack Developer
           </h2>
         </TextReveal>
