@@ -1,37 +1,28 @@
 import { TextReveal } from "../ui/aceternity";
-import { Code2, Database, Globe, Layout, Server, Smartphone } from "lucide-react";
+import { Code2, Database, Globe, Layout, Server, Smartphone, CircuitBoard} from "lucide-react";
 
 const skills = [
   {
     icon: <Code2 className="w-6 h-6" />,
     title: "Frontend Development",
-    technologies: ["React", "TypeScript", "Tailwind CSS"]
+    technologies: ["SwiftUI", "Swift UIKit", "React", "TypeScript", "Tailwind CSS"]
   },
   {
     icon: <Server className="w-6 h-6" />,
     title: "Backend Development",
-    technologies: ["Node.js", "Express", "Python"]
+    technologies: ["Node.js", "Python", "Supabase", "PostgreSQL", "Java"]
   },
   {
-    icon: <Database className="w-6 h-6" />,
-    title: "Database",
-    technologies: ["PostgreSQL", "MongoDB", "Redis"]
+    icon: <CircuitBoard className="w-6 h-6" />,
+    title: "Embedded Systems",
+    technologies: ["C++"]
   },
   {
     icon: <Globe className="w-6 h-6" />,
-    title: "DevOps",
-    technologies: ["Docker", "AWS", "CI/CD"]
+    title: "Machine Learning",
+    technologies: ["PyTorch", "Tensorflow", "Pandas", "Sci-Kit"]
   },
-  {
-    icon: <Layout className="w-6 h-6" />,
-    title: "UI/UX Design",
-    technologies: ["Figma", "Adobe XD", "Sketch"]
-  },
-  {
-    icon: <Smartphone className="w-6 h-6" />,
-    title: "Mobile Development",
-    technologies: ["React Native", "Flutter"]
-  }
+  
 ];
 
 export default function Skills() {

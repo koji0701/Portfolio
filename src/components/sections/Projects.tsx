@@ -39,17 +39,17 @@ const projects = [
   return (
     <section className="py-20 relative min-h-screen" id="projects">
       {/* Background sparkles */}
-      <div className="absolute inset-0 w-full h-full z-0">
-        <SparklesCore
-          id="tsparticlesfullpage"
-          className="w-full h-full"
-          particleDensity={100}
-          particleColor="#FFFFFF"
-          speed={0.3}
-          minSize={0.8}
-          maxSize={1.5}
-        />
-      </div>
+      <div className="absolute inset-0">
+          <SparklesCore
+            id="tsparticlesfullpage"
+            className="w-full h-full"
+            particleDensity={100}
+            particleColor="#FFFFFF"
+            speed={0.3}
+            minSize={0.8}
+            maxSize={1.5}
+          />
+        </div>
 
       {/* Content with relative positioning */}
       <div className="relative z-10 max-w-7xl mx-auto px-2">
