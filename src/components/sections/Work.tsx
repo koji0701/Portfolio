@@ -107,7 +107,7 @@ export default function Work() {
   
           <div className="grid grid-cols-12 gap-8">
             {/* Sidebar */}
-            <div className="col-span-3">
+            <div className="col-span-2">
               <div className="space-y-2">
                 {sidebarLinks.map((link) => (
                   <div 
