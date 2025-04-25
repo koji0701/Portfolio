@@ -8,12 +8,35 @@
   }
 }
 
-html, body {
+/* Ensure black background on all root elements */
+html, body, #root {
   margin: 0;
   padding: 0;
   width: 100%;
+  background-color: black; /* Explicitly set black background */
+  color: white;
   overflow-x: hidden;
+  min-height: 100vh;
 }
+
+/* Improve overscroll behavior */
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior: none; /* Prevents bounce effects that can reveal white space */
+  font-size: 16px; /* Enforce consistent base font size */
+}
+
+/* For mobile Safari, ensure black background during bounce/overscroll */
+@supports (-webkit-touch-callout: none) {
+  body {
+    height: -webkit-fill-available;
+  }
+  html {
+    background: black;
+    height: -webkit-fill-available;
+  }
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
@@ -25,7 +48,7 @@ html, body {
   scrollbar-width: none;  /* Firefox */
 }
 
-/* Add these classes */
+/* 3D transformations */
 .perspective-1000 {
   perspective: 1000px;
 }
@@ -34,17 +57,12 @@ html, body {
   transform-style: preserve-3d;
 }
 
-/* Add smooth scrolling behavior to the document */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Prevent scroll chaining for smoother experience */
+/* Body settings */
 body {
+  zoom: 1;
+  -webkit-text-size-adjust: 100%;
+  min-width: 100%;
   overscroll-behavior: none;
-}
-html {
-  font-size: 16px; /* Enforce consistent base font size */
 }
 
 @media screen and (min-width: 768px) {
@@ -53,19 +71,10 @@ html {
   }
 }
 
-
-body {
-  zoom: 1;
-  -webkit-text-size-adjust: 100%;
-}
-body {
-  min-width: 100%;
-}
-
-/* Update the container class */
+/* Container class */
 .container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1280px; /* or whatever your design requires */
   margin: 0 auto;
   padding: 0; /* Ensure no padding */
 }

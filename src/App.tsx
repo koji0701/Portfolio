@@ -11,7 +11,7 @@ import { BackgroundBeamsWithCollision } from './components/ui/background-beams-w
 function App() {
   return (
     <BrowserRouter> 
-      <div className="min-h-screen bg-black text-white relative">
+      <div className="min-h-screen bg-black text-white relative overflow-hidden">
         {/* Fixed background effects */}
         <div className="fixed inset-0 z-0 pointer-events-none">
           <BackgroundBeamsWithCollision className="absolute inset-0 w-full h-full" />
