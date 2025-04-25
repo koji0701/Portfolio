@@ -98,7 +98,7 @@ const workHistory: WorkHistoryType = {
 };
 
 export default function Work() {
-  const [selectedTab, setSelectedTab] = useState<string>("AI Research");
+  const [selectedTab, setSelectedTab] = useState<string>("Morgan Stanley Tokyo");
   const sidebarLinks = Object.keys(workHistory);
   const selectedExperience = workHistory[selectedTab];
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
