@@ -37,7 +37,7 @@ function App() {
                 <About />
                 <Work />
                 <Projects />
-                <Skills />
+                {/* <Skills /> */}
               </>
             } />
           </Routes>

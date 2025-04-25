@@ -135,14 +135,14 @@ export default function Work() {
   };
 
   return (
-    <section className="min-h-screen relative py-8 overflow-hidden" id="work">
+    <section className="relative py-6 overflow-hidden" id="work">
       {/* Subtle grid background - neutral color */}
       <div className="absolute inset-0 bg-[length:50px_50px] bg-grid-white/[0.02] z-0" />
       
       <div className="relative z-10 max-w-6xl mx-auto px-4">
         {/* Title */}
         <TextReveal>
-          <h2 className="text-4xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-neutral-200 via-indigo-200 to-neutral-300">
+          <h2 className="text-4xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-neutral-200 via-indigo-200 to-neutral-300">
             Work Experience
           </h2>
         </TextReveal>

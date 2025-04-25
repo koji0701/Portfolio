@@ -75,27 +75,14 @@ const projects = [
     awardWinning: false
   }
 ];
-
 export default function Projects() {
   return (
-    <section className="py-20 relative min-h-screen" id="projects">
-      {/* Background sparkles */}
-      <div className="absolute inset-0">
-          <SparklesCore
-            id="tsparticlesfullpage"
-            className="w-full h-full"
-            particleDensity={100}
-            particleColor="#FFFFFF"
-            speed={0.3}
-            minSize={0.8}
-            maxSize={1.5}
-          />
-        </div>
+    <section className="py-10 relative" id="projects">
 
       {/* Content with relative positioning */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <TextReveal>
-          <h1 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-neutral-100 to-neutral-400">
+          <h1 className="text-4xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-neutral-100 to-neutral-400">
             Featured Projects
           </h1>
         </TextReveal>

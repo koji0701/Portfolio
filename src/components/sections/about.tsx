@@ -1,22 +1,7 @@
 import { TextReveal } from "../ui/aceternity";
-import { SparklesCore } from "../ui/sparkles";
-
 export default function About() {
   return (
-    <section className="min-h-screen relative py-20" id="about">
-      {/* Background sparkles */}
-      <div className="absolute inset-0">
-        <SparklesCore
-          id="about-sparkles"
-          className="w-full h-full"
-          particleDensity={100}
-          particleColor="#FFFFFF"
-          speed={0.3}
-          minSize={0.8}
-          maxSize={1.5}
-        />
-      </div>
-
+    <section className="relative py-10" id="about">
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4">
         <TextReveal>
