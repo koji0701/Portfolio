@@ -179,9 +179,9 @@ export default function Work() {
                 className={cn(
                   "experience-card flex-shrink-0 snap-center relative p-6 rounded-xl cursor-pointer transition-all duration-300 overflow-hidden w-80",
                   selectedTab === company 
-                    ? "bg-gradient-to-br from-indigo-900/90 to-purple-900/90 border-2 border-indigo-500/50" 
-                    : "bg-gradient-to-br from-indigo-950/60 to-purple-950/60 border border-indigo-800/30",
-                  hoveredCard === company && selectedTab !== company ? "shadow-lg shadow-indigo-500/20" : ""
+                    ? "bg-gradient-to-br from-indigo-950/60 to-purple-950/60 border-2 border-indigo-500/30" 
+                    : "bg-gradient-to-br from-indigo-950/40 to-purple-950/40 border border-indigo-800/20",
+                  hoveredCard === company && selectedTab !== company ? "shadow-lg shadow-indigo-500/15" : ""
                 )}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -196,10 +196,10 @@ export default function Work() {
               >
                 {/* Glow effect */}
                 <div className={cn(
-                  "absolute inset-0 opacity-0 transition-opacity duration-300",
-                  selectedTab === company ? "opacity-100" : "",
-                  "bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10"
-                )} />
+                "absolute inset-0 opacity-0 transition-opacity duration-300",
+                selectedTab === company ? "opacity-100" : "",
+                "bg-gradient-to-r from-indigo-500/5 via-purple-500/5 to-pink-500/5"
+              )} />
 
                 {/* Company circle indicator */}
                 <div className="flex items-center gap-3 mb-3">
@@ -256,8 +256,8 @@ export default function Work() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.4 }}
-            className="bg-gradient-to-br from-indigo-900/80 to-purple-900/80 rounded-2xl p-6 border border-indigo-600/30 backdrop-blur-sm"
-          >
+            className="bg-gradient-to-br from-indigo-950/70 to-purple-950/70 rounded-2xl p-6 border border-indigo-600/20 backdrop-blur-sm"
+            >
             <div className="flex items-baseline flex-wrap gap-3 mb-4">
               <h3 className="text-2xl font-bold text-white">{selectedExperience.position}</h3>
               <div className="flex items-center gap-2">
