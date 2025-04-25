@@ -78,9 +78,8 @@ const projects = [
 export default function Projects() {
   return (
     <section className="py-10 relative" id="projects">
-
       {/* Content with relative positioning */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto">
         <TextReveal>
           <h1 className="text-4xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-neutral-100 to-neutral-400">
             Featured Projects

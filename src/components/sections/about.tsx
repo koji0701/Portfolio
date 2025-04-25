@@ -3,7 +3,7 @@ export default function About() {
   return (
     <section className="relative py-10" id="about">
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4">
+      <div className="relative z-10 max-w-4xl mx-auto">
         <TextReveal>
           <h2 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-neutral-100 to-neutral-400">
             About Me

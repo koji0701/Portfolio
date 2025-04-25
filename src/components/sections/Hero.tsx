@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Content */}
-      <div className="relative z-10 text-center px-4">
+      <div className="relative z-10 text-center">
         <TextReveal>
           <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-neutral-100 to-neutral-400 mb-2">
             Koji Wong
