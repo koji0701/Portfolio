@@ -1,5 +1,5 @@
 import { TextReveal } from "../ui/aceternity";
-import { Card3D } from "../ui/3d-card";
+import { LitCard } from "../ui/lit-card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
 import { SparklesCore } from "../ui/sparkles";
@@ -23,7 +23,9 @@ const projects = [
     image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2371&auto=format&fit=crop",
     link: "https://github.com/SamLubelsky/CommunityOfHope"
   }
-];export default function Projects() {
+];
+
+export default function Projects() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: 'left' | 'right') => {
@@ -78,7 +80,7 @@ const projects = [
           {/* Scrolling Container */}
           <div 
             ref={scrollContainerRef}
-            className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-4 pb-4"
+            className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-6 pb-6"
             style={{
               scrollbarWidth: 'none',
               msOverflowStyle: 'none',
@@ -87,7 +89,7 @@ const projects = [
           >
             {projects.map((project, index) => (
               <div key={index} className="flex-shrink-0 snap-center">
-                <Card3D
+                <LitCard
                   title={project.title}
                   description={project.description}
                   image={project.image}
