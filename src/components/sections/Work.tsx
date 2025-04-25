@@ -1,3 +1,4 @@
+
 import { useState, useRef, useEffect } from "react";
 import { TextReveal } from "../ui/aceternity";
 import { cn } from "../../utils";
@@ -90,7 +91,7 @@ export default function Work() {
   // Scroll function for carousel navigation
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
-      const scrollAmount = direction === 'left' ? -400 : 400;
+      const scrollAmount = direction === 'left' ? -350 : 350;
       scrollContainerRef.current.scrollBy({
         left: scrollAmount,
         behavior: 'smooth'
@@ -134,39 +135,39 @@ export default function Work() {
   };
 
   return (
-    <section className="min-h-screen relative py-12 overflow-hidden" id="work">
+    <section className="min-h-screen relative py-8 overflow-hidden" id="work">
       {/* Subtle grid background - neutral color */}
       <div className="absolute inset-0 bg-[length:50px_50px] bg-grid-white/[0.02] z-0" />
       
       <div className="relative z-10 max-w-6xl mx-auto px-4">
         {/* Title */}
         <TextReveal>
-          <h2 className="text-5xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-neutral-200 via-indigo-200 to-neutral-300">
+          <h2 className="text-4xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-neutral-200 via-indigo-200 to-neutral-300">
             Work Experience
           </h2>
         </TextReveal>
 
         {/* Experience cards carousel */}
-        <div className="relative mb-10">
+        <div className="relative mb-6">
           {/* Scroll Buttons */}
           <button
             onClick={() => scroll('left')}
             className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-black/50 hover:bg-black/70 transition-colors"
           >
-            <ChevronLeft className="w-6 h-6 text-white" />
+            <ChevronLeft className="w-5 h-5 text-white" />
           </button>
           
           <button
             onClick={() => scroll('right')}
             className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-black/50 hover:bg-black/70 transition-colors"
           >
-            <ChevronRight className="w-6 h-6 text-white" />
+            <ChevronRight className="w-5 h-5 text-white" />
           </button>
 
           {/* Scrolling Container */}
           <div 
             ref={scrollContainerRef}
-            className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-6 pb-6"
+            className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-4 pb-4"
             style={{
               scrollbarWidth: 'none',
               msOverflowStyle: 'none',
@@ -177,7 +178,7 @@ export default function Work() {
               <motion.div
                 key={company}
                 className={cn(
-                  "experience-card flex-shrink-0 snap-center relative p-6 rounded-xl cursor-pointer transition-all duration-300 overflow-hidden w-80",
+                  "experience-card flex-shrink-0 snap-center relative p-4 rounded-xl cursor-pointer transition-all duration-300 overflow-hidden w-64",
                   selectedTab === company 
                     ? "bg-gradient-to-br from-indigo-950/60 to-purple-950/60 border-2 border-indigo-500/30" 
                     : "bg-gradient-to-br from-indigo-950/40 to-purple-950/40 border border-indigo-800/20",
@@ -196,15 +197,15 @@ export default function Work() {
               >
                 {/* Glow effect */}
                 <div className={cn(
-                "absolute inset-0 opacity-0 transition-opacity duration-300",
-                selectedTab === company ? "opacity-100" : "",
-                "bg-gradient-to-r from-indigo-500/5 via-purple-500/5 to-pink-500/5"
-              )} />
+                  "absolute inset-0 opacity-0 transition-opacity duration-300",
+                  selectedTab === company ? "opacity-100" : "",
+                  "bg-gradient-to-r from-indigo-500/5 via-purple-500/5 to-pink-500/5"
+                )} />
 
                 {/* Company circle indicator */}
-                <div className="flex items-center gap-3 mb-3">
+                <div className="flex items-center gap-2 mb-2">
                   <div className={cn(
-                    "w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold",
+                    "w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold",
                     selectedTab === company 
                       ? "bg-gradient-to-r from-indigo-500 to-purple-500 text-white" 
                       : "bg-indigo-950 text-indigo-400"
@@ -212,18 +213,18 @@ export default function Work() {
                     {company.substring(0, 1)}
                   </div>
                   <h3 className={cn(
-                    "text-xl font-bold transition-colors",
+                    "text-lg font-bold transition-colors",
                     selectedTab === company ? "text-white" : "text-indigo-300"
                   )}>
                     {company}
                   </h3>
                 </div>
 
-                <p className="text-indigo-200/80 mb-2 text-sm">
+                <p className="text-indigo-200/80 mb-1 text-xs">
                   {workHistory[company].position}
                 </p>
                 
-                <p className="text-indigo-300/60 text-xs mb-3">
+                <p className="text-indigo-300/60 text-xs mb-2">
                   {workHistory[company].duration}
                 </p>
 
@@ -232,13 +233,13 @@ export default function Work() {
                   {workHistory[company].skills.slice(0, 3).map((skill, i) => (
                     <span 
                       key={i}
-                      className="px-2 py-1 text-xs rounded-full text-indigo-200 bg-indigo-800/30"
+                      className="px-2 py-0.5 text-xs rounded-full text-indigo-200 bg-indigo-800/30"
                     >
                       {skill}
                     </span>
                   ))}
                   {workHistory[company].skills.length > 3 && (
-                    <span className="px-2 py-1 text-xs rounded-full text-indigo-200 bg-indigo-800/30">
+                    <span className="px-2 py-0.5 text-xs rounded-full text-indigo-200 bg-indigo-800/30">
                       +{workHistory[company].skills.length - 3}
                     </span>
                   )}
@@ -256,50 +257,50 @@ export default function Work() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.4 }}
-            className="bg-gradient-to-br from-indigo-950/70 to-purple-950/70 rounded-2xl p-6 border border-indigo-600/20 backdrop-blur-sm"
-            >
-            <div className="flex items-baseline flex-wrap gap-3 mb-4">
-              <h3 className="text-2xl font-bold text-white">{selectedExperience.position}</h3>
+            className="bg-gradient-to-br from-indigo-950/70 to-purple-950/70 rounded-2xl p-5 border border-indigo-600/20 backdrop-blur-sm"
+          >
+            <div className="flex items-baseline flex-wrap gap-3 mb-3">
+              <h3 className="text-xl font-bold text-white">{selectedExperience.position}</h3>
               <div className="flex items-center gap-2">
-                <span className="text-xl text-indigo-400">@</span>
-                <h4 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-300">
+                <span className="text-lg text-indigo-400">@</span>
+                <h4 className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-300">
                   {selectedExperience.company}
                 </h4>
               </div>
               <div className="ml-auto">
-                <span className="text-sm text-indigo-300 font-light">
+                <span className="text-xs text-indigo-300 font-light">
                   {selectedExperience.duration}
                 </span>
               </div>
             </div>
             
-            <div className="mb-5">
-              <h5 className="text-indigo-300 mb-2 font-medium">Key Achievements</h5>
-              <ul className="space-y-3">
+            <div className="mb-4">
+              <h5 className="text-indigo-300 mb-2 text-sm font-medium">Key Achievements</h5>
+              <ul className="space-y-2">
                 {selectedExperience.achievements.map((achievement, i) => (
                   <motion.li 
                     key={i} 
-                    className="flex items-start gap-3"
+                    className="flex items-start gap-2"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: i * 0.1 }}
                   >
-                    <div className="mt-1 min-w-6 h-6 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center text-white text-xs">
+                    <div className="mt-0.5 min-w-5 h-5 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center text-white text-xs">
                       {i + 1}
                     </div>
-                    <p className="text-white/90 text-sm">{achievement}</p>
+                    <p className="text-white/90 text-xs">{achievement}</p>
                   </motion.li>
                 ))}
               </ul>
             </div>
 
             <div>
-              <h5 className="text-indigo-300 mb-2 font-medium">Technologies & Skills</h5>
-              <div className="flex flex-wrap gap-2">
+              <h5 className="text-indigo-300 mb-2 text-sm font-medium">Technologies & Skills</h5>
+              <div className="flex flex-wrap gap-1.5">
                 {selectedExperience.skills.map((skill, i) => (
                   <motion.span 
                     key={i}
-                    className="px-3 py-1 bg-gradient-to-r from-indigo-600/80 to-purple-600/80 text-white rounded-lg text-xs font-medium border border-indigo-500/30 shadow-sm"
+                    className="px-2.5 py-0.5 bg-gradient-to-r from-indigo-600/80 to-purple-600/80 text-white rounded-lg text-xs font-medium border border-indigo-500/30 shadow-sm"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.2, delay: i * 0.05 }}

@@ -30,7 +30,7 @@ export function LitCard({ title, description, image, link }: LitCardProps) {
       href={link} 
       target="_blank" 
       rel="noopener noreferrer" 
-      className="block w-[350px] h-[300px] perspective-1000"
+      className="block w-[250px] h-[150px] perspective-1000"
     >
       <div
         ref={cardRef}

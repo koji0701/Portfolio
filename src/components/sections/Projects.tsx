@@ -3,7 +3,6 @@ import { LitCard } from "../ui/lit-card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
 import { SparklesCore } from "../ui/sparkles";
-
 const projects = [
   {
     title: "Bear Eats",
@@ -22,9 +21,50 @@ const projects = [
     description: "Mobile app that connects St. Louis community mentors with teenage moms; built for Community of Hope nonprofit",
     image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2371&auto=format&fit=crop",
     link: "https://github.com/SamLubelsky/CommunityOfHope"
+  },
+  {
+    title: "GetWashU",
+    description: "A 2048 game variant inspired by GetMIT, playable with arrow keys or WASD",
+    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2371&auto=format&fit=crop",
+    link: "https://github.com/koji0701/GetWashU"
+  },
+  {
+    title: "GameUpGPT",
+    description: "AI-powered game development and enhancement tool using GPT technology",
+    image: "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?q=80&w=2674&auto=format&fit=crop",
+    link: "https://github.com/koji0701/GameUpGPT"
+  },
+  {
+    title: "ParkourIsland",
+    description: "3D parkour game set on a mysterious island with challenging obstacles",
+    image: "https://images.unsplash.com/photo-1596662450730-384b8902ba8b?q=80&w=2525&auto=format&fit=crop",
+    link: "https://github.com/koji0701/ParkourIsland"
+  },
+  {
+    title: "DuetGame",
+    description: "Two-player cooperative game with musical elements and synchronized gameplay",
+    image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2670&auto=format&fit=crop",
+    link: "https://github.com/koji0701/DuetGame"
+  },
+  {
+    title: "Intern-X",
+    description: "Platform for connecting students with internship opportunities",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2370&auto=format&fit=crop",
+    link: "https://github.com/Intern-X"
+  },
+  {
+    title: "UnveilAI",
+    description: "AI tools for content creation and analysis",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2532&auto=format&fit=crop",
+    link: "https://github.com/UnveilAI"
+  },
+  {
+    title: "Portfolio",
+    description: "Personal portfolio website built with React, TypeScript, and Tailwind CSS",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2372&auto=format&fit=crop",
+    link: "https://github.com/koji0701/Portfolio"
   }
 ];
-
 export default function Projects() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
