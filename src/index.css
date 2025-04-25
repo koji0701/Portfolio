@@ -37,3 +37,22 @@ html {
 body {
   overscroll-behavior: none;
 }
+html {
+  font-size: 16px; /* Enforce consistent base font size */
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 16px; /* Keep consistent across breakpoints */
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px; /* or whatever your design requires */
+  margin: 0 auto;
+}
+body {
+  zoom: 1;
+  -webkit-text-size-adjust: 100%;
+}
