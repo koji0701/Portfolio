@@ -18,32 +18,50 @@ type WorkHistoryType = {
 };
 
 const workHistory: WorkHistoryType = {
-  "AI Research": {
+  "Morgan Stanley Tokyo": {
+    company: "Morgan Stanley Tokyo",
+    position: "Early Insights Fellow",
+    duration: "April 2025 - Present",
+    achievements: [
+      "Learning about applying technology to the financial services industry and gaining insights into working in Tokyo"
+    ],
+    skills: ["Data Analysis", "Financial Modeling", "Python"]
+  },
+  "WashU CS Department": {
     company: "Washington University in St. Louis",
     position: "Artificial Intelligence Research Assistant",
     duration: "Nov 2024 - Present",
     achievements: [
-      "Developing AI to explore scenarios for autonomous vehicle decision systems with Python, PyTorch & Carla"
+      "Developing AI to explore scenarios for autonomous vehicle decision systems with Python, PyTorch & Habitat Simulator"
     ],
     skills: ["Python", "PyTorch", "Carla", "AI", "Autonomous Systems"]
   },
   "Social Fabric": {
     company: "Social Fabric LLC",
-    position: "Founding Software Developer",
+    position: "Founding Software Engineer",
     duration: "Oct 2024 - Present",
     achievements: [
       "Frontend development of a social media-esc cross-platform mobile app in React Native, TypeScript, Expo"
     ],
     skills: ["React Native", "TypeScript", "Expo", "Mobile Development", "Frontend"]
   },
-  "WURocketry": {
-    company: "WURocketry",
-    position: "United Flight Software Developer",
+  "Google Developer Student Club": {
+    company: "Google Developer Student Club",
+    position: "SWE Team Lead",
     duration: "Sept 2024 - Present",
     achievements: [
+      "Leading development of a full-stack web application for the WashU School of Medicine using React, TypeScript, FastAPI",
+      "Developed a full-stack mobile app for local non-profit organization Community of Hope"
+    ],
+    skills: ["React", "Expo", "TypeScript", "FastAPI"]
+  },
+  "WURocketry": {
+    company: "WURocketry",
+    position: "Software Developer",
+    duration: "Sept 2024 - February 2025",
+    achievements: [
       "Product development of 10-foot rocket for NASA Student Launch; team nationally ranked in top 10",
-      "Developing airbrake control algorithms (C & C++) in a subteam of 6 to control rocket flight trajectory to predicted apogee",
-      "Working closely with other subteams (60+ students) for full rocket development"
+      "Developed data logging systems (C & C++) in a subteam of 6 to log rocket flight trajectory and telemetry data",
     ],
     skills: ["C", "C++", "Embedded Systems", "Control Systems", "Team Collaboration"]
   },
@@ -56,7 +74,7 @@ const workHistory: WorkHistoryType = {
       "Co-founded annual hackathon 'Hack the Planet'; $5000 prize sponsored by Adobe, PG&E, AoPS, & Wolfram",
       "Managed $100,000 club funds to establish the first maker space at my high school"
     ],
-    skills: ["Leadership", "Project Management", "Event Planning", "Fundraising", "Team Building"]
+    skills: ["Leadership", "Project Management", "Fundraising"]
   },
   "CoderDojo": {
     company: "TriValley CoderDojo",
