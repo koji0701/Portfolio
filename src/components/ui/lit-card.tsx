@@ -1,15 +1,16 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { PatternBackground } from './pattern-background';
-
+import { Medal } from 'lucide-react';
 
 interface LitCardProps {
   title: string;
   description: string;
   image: string;
   link: string;
+  awardWinning?: boolean;
 }
 
-export function LitCard({ title, description, image, link }: LitCardProps) {
+export function LitCard({ title, description, image, link, awardWinning = false }: LitCardProps) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -45,16 +46,6 @@ export function LitCard({ title, description, image, link }: LitCardProps) {
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
-        {/* Card background with dynamic lighting */}
-        {/* <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 rounded-xl transition-all duration-500"
-          style={{ 
-            filter: 'brightness(0.8)',
-            boxShadow: isHovering 
-              ? `inset ${(mousePosition.x - 0.5) * -40}px ${(mousePosition.y - 0.5) * -40}px 120px rgba(255,255,255,0.1),
-                  0 10px 20px rgba(0,0,0,0.2)`
-              : 'inset 0 0 80px rgba(0,0,0,0.5)'
-          }}
-        /> */}
         <PatternBackground 
           pattern="circuit" 
           primaryColor="#1e1b4b" 
@@ -64,6 +55,13 @@ export function LitCard({ title, description, image, link }: LitCardProps) {
         
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent rounded-xl" />
+        
+        {/* Award medal */}
+        {awardWinning && (
+          <div className="absolute top-2 right-2 z-20">
+            <Medal className="w-6 h-6 text-yellow-400 drop-shadow-lg" />
+          </div>
+        )}
         
         {/* Highlight effect */}
         <div 
