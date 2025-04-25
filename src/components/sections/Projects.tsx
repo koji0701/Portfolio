@@ -5,14 +5,14 @@ import { SparklesCore } from "../ui/sparkles";
 const projects = [
   {
     title: "Intern-X",
-    description: "Platform for connecting students with internship opportunities. 2nd @ WashU Meta x Llama Hackathon",
+    description: "Llama-powered platform for connecting students with internships, recruiters & alumni. 2nd @ WashU Meta x Llama Hackathon",
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2370&auto=format&fit=crop",
     link: "https://github.com/Intern-X",
     awardWinning: true
   },
   {
     title: "UnveilAI",
-    description: "AI tools for content creation and analysis. Finalist @ Google DevFest Hackathon",
+    description: "Developer tool for onboarding to new codebases. Finalist @ Google DevFest Hackathon",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2532&auto=format&fit=crop",
     link: "https://github.com/UnveilAI",
     awardWinning: true
