@@ -275,7 +275,7 @@ export default function Work() {
             </div>
             
             <div className="mb-4">
-              <h5 className="text-indigo-300 mb-2 text-sm font-medium">Key Achievements</h5>
+              <h5 className="text-indigo-300 mb-2 text-sm font-medium">Experiences</h5>
               <ul className="space-y-2">
                 {selectedExperience.achievements.map((achievement, i) => (
                   <motion.li 
@@ -285,7 +285,7 @@ export default function Work() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: i * 0.1 }}
                   >
-                    <div className="mt-0.5 min-w-5 h-5 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center text-white text-xs">
+                    <div className="min-w-4 h-4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center text-white text-[10px]">
                       {i + 1}
                     </div>
                     <p className="text-white/90 text-xs">{achievement}</p>

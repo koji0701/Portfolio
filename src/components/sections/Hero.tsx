@@ -21,6 +21,8 @@ export default function Hero() {
         <TextReveal>
           <p className="text-neutral-400 max-w-2xl mx-auto mb-12">
             Computer Science + Mathematics @ <a href="https://washu.edu" className="underline decoration-1 hover:text-neutral-300 transition-colors">Washington University in St. Louis</a>
+            <br />
+            Incoming SWE Intern @ NYC Mayor's Office for Economic Opportunity 
           </p>
         </TextReveal>
 
