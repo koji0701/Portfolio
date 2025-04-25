@@ -1,3 +1,5 @@
+
+
 import React, { useState, useRef } from 'react';
 import { PatternBackground } from './pattern-background';
 import { Medal } from 'lucide-react';
@@ -77,8 +79,8 @@ export function LitCard({ title, description, image, link, awardWinning = false 
           }}
         />
         
-        {/* Content */}
-        <div className="absolute bottom-0 left-0 w-full p-5 z-10 transform-gpu transition-transform duration-500 group-hover:translate-y-0 translate-y-2">
+        {/* Content - Changed from bottom-0 to top-0 */}
+        <div className="absolute top-0 left-0 w-full p-5 z-10 transform-gpu transition-transform duration-500 group-hover:translate-y-0 translate-y-0">
           <h3 className="text-xl font-bold text-white mb-1">{title}</h3>
           <p className="text-sm text-gray-300">{description}</p>
         </div>
