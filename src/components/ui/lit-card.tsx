@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { PatternBackground } from './pattern-background';
+
 
 interface LitCardProps {
   title: string;
@@ -44,7 +46,7 @@ export function LitCard({ title, description, image, link }: LitCardProps) {
         onMouseLeave={() => setIsHovering(false)}
       >
         {/* Card background with dynamic lighting */}
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 rounded-xl transition-all duration-500"
+        {/* <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 rounded-xl transition-all duration-500"
           style={{ 
             filter: 'brightness(0.8)',
             boxShadow: isHovering 
@@ -52,6 +54,12 @@ export function LitCard({ title, description, image, link }: LitCardProps) {
                   0 10px 20px rgba(0,0,0,0.2)`
               : 'inset 0 0 80px rgba(0,0,0,0.5)'
           }}
+        /> */}
+        <PatternBackground 
+          pattern="circuit" 
+          primaryColor="#1e1b4b" 
+          secondaryColor="#4338ca"
+          className="absolute inset-0 rounded-xl transition-all duration-500"
         />
         
         {/* Overlay */}

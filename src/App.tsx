@@ -6,23 +6,42 @@ import Skills from './components/sections/Skills';
 import Work from './components/sections/Work';
 import About from './components/sections/about';
 import { SparklesCore } from './components/ui/sparkles';
+import { BackgroundBeamsWithCollision } from './components/ui/background-beams-with-collision';
 
 function App() {
   return (
     <BrowserRouter> 
-
-      <div className="min-h-screen bg-black text-white">
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <About />
-              <Work />
-              <Projects />
-              <Skills />
-            </>
-          } />
-        </Routes>
+      <div className="min-h-screen bg-black text-white relative">
+        {/* Fixed background effects */}
+        <div className="fixed inset-0 z-0 pointer-events-none">
+          <BackgroundBeamsWithCollision className="absolute inset-0 w-full h-full" />
+          <div className="absolute inset-0">
+            <SparklesCore
+              id="app-sparkles"
+              className="w-full h-full"
+              particleDensity={40}
+              particleColor="#FFFFFF"
+              speed={0.3}
+              minSize={0.8}
+              maxSize={1.2}
+            />
+          </div>
+        </div>
+        
+        {/* Main content with higher z-index */}
+        <div className="relative z-10">
+          <Routes>
+            <Route path="/" element={
+              <>
+                <Hero />
+                <About />
+                <Work />
+                <Projects />
+                <Skills />
+              </>
+            } />
+          </Routes>
+        </div>
       </div>
     </BrowserRouter>
   );

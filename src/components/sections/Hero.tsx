@@ -1,27 +1,9 @@
 import { BackgroundGradient, TextReveal } from "../ui/aceternity";
 import { Github, Linkedin, Mail } from "lucide-react";
-import { BackgroundBeamsWithCollision } from "../ui/background-beams-with-collision";
-import { SparklesCore } from "../ui/sparkles";
 
 export default function Hero() {
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background layers */}
-      <div className="absolute inset-0">
-        <BackgroundBeamsWithCollision className="absolute inset-0 w-full h-full" />
-        <div className="absolute inset-0">
-          <SparklesCore
-            id="hero-sparkles"
-            className="w-full h-full"
-            particleDensity={40}
-            particleColor="#FFFFFF"
-            speed={0.3}
-            minSize={0.8}
-            maxSize={1.2}
-          />
-        </div>
-      </div>
-      
       {/* Content */}
       <div className="relative z-10 text-center px-4">
         <TextReveal>
@@ -38,9 +20,7 @@ export default function Hero() {
 
         <TextReveal>
           <p className="text-neutral-400 max-w-2xl mx-auto mb-12">
-            
             Computer Science + Mathematics @ <a href="https://washu.edu" className="underline decoration-1 hover:text-neutral-300 transition-colors">Washington University in St. Louis</a>
-            
           </p>
         </TextReveal>
 
