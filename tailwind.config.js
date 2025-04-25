@@ -19,7 +19,15 @@ export default {
           },
         },
       },
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Clash Grotesk"', 'sans-serif'],
+          },
+        },
+      },
     },
   },
   plugins: [],
 }
+

@@ -1,7 +1,12 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Clash Grotesk', sans-serif;
+  }
+}
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .scrollbar-hide::-webkit-scrollbar {
@@ -21,4 +26,14 @@
 
 .transform-style-3d {
   transform-style: preserve-3d;
+}
+
+/* Add smooth scrolling behavior to the document */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent scroll chaining for smoother experience */
+body {
+  overscroll-behavior: none;
 }
