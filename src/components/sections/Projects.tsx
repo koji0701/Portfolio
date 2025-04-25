@@ -25,6 +25,13 @@ const projects = [
     awardWinning: true
   },
   {
+    title: "GameUpGPT",
+    description: "AI-powered iMessage extension to help you 'game up'",
+    image: "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?q=80&w=2674&auto=format&fit=crop",
+    link: "https://github.com/koji0701/GameUpGPT",
+    awardWinning: false
+  },
+  {
     title: "Issho",
     description: "Strava for student productivity. Track your productivity, give or send a thumbs up for completing work, & get your work done",
     image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2370&auto=format&fit=crop",
@@ -40,18 +47,12 @@ const projects = [
   },
   {
     title: "GetWashU",
-    description: "A 2048 game variant inspired by GetMIT, playable with arrow keys or WASD",
+    description: "A 2048 game variant inspired by GetMIT",
     image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2371&auto=format&fit=crop",
     link: "https://github.com/koji0701/GetWashU",
     awardWinning: false
   },
-  {
-    title: "GameUpGPT",
-    description: "AI-powered iMessage extension to help you 'game up'",
-    image: "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?q=80&w=2674&auto=format&fit=crop",
-    link: "https://github.com/koji0701/GameUpGPT",
-    awardWinning: false
-  },
+  
   {
     title: "ParkourIsland",
     description: "2D platformer game",
@@ -69,7 +70,7 @@ const projects = [
   
   {
     title: "Portfolio",
-    description: "Personal portfolio website built with React, TypeScript, and Tailwind CSS",
+    description: "It's this website",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2372&auto=format&fit=crop",
     link: "https://github.com/koji0701/Portfolio",
     awardWinning: false
