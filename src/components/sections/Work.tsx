@@ -23,7 +23,7 @@ const workHistory: WorkHistoryType = {
     position: "Early Insights Fellow",
     duration: "April 2025 - Present",
     achievements: [
-      "Learning about applying technology to the financial services industry and gaining insights into working in Tokyo"
+      "Learning about applying technology to the financial services industry and gaining insights into a career in Tokyo"
     ],
     skills: ["Data Analysis", "Financial Modeling", "Python"]
   },
@@ -34,16 +34,7 @@ const workHistory: WorkHistoryType = {
     achievements: [
       "Developing AI to explore scenarios for autonomous vehicle decision systems with Python, PyTorch & Habitat Simulator"
     ],
-    skills: ["Python", "PyTorch", "Carla", "AI", "Autonomous Systems"]
-  },
-  "Social Fabric": {
-    company: "Social Fabric LLC",
-    position: "Founding Software Engineer",
-    duration: "Oct 2024 - Present",
-    achievements: [
-      "Frontend development of a social media-esc cross-platform mobile app in React Native, TypeScript, Expo"
-    ],
-    skills: ["React Native", "TypeScript", "Expo", "Mobile Development", "Frontend"]
+    skills: ["Python", "PyTorch", "Habitat", "AI", "Autonomous Systems"]
   },
   "Google Developer Student Club": {
     company: "Google Developer Student Club",
@@ -55,10 +46,20 @@ const workHistory: WorkHistoryType = {
     ],
     skills: ["React", "Expo", "TypeScript", "FastAPI"]
   },
+  "Social Fabric": {
+    company: "Social Fabric LLC",
+    position: "Founding Software Engineer",
+    duration: "Oct 2024 - February 2025",
+    achievements: [
+      "Frontend development of a social media-esc cross-platform mobile app in React Native, TypeScript, Expo"
+    ],
+    skills: ["React Native", "TypeScript", "Expo", "Mobile Development", "Frontend"]
+  },
+  
   "WURocketry": {
     company: "WURocketry",
     position: "Software Developer",
-    duration: "Sept 2024 - February 2025",
+    duration: "Sept 2024 - January 2025",
     achievements: [
       "Product development of 10-foot rocket for NASA Student Launch; team nationally ranked in top 10",
       "Developed data logging systems (C & C++) in a subteam of 6 to log rocket flight trajectory and telemetry data",
@@ -72,7 +73,6 @@ const workHistory: WorkHistoryType = {
     achievements: [
       "Led 100+ person club to develop $2,500 winning project in the Samsung Solve For Tomorrow competition",
       "Co-founded annual hackathon 'Hack the Planet'; $5000 prize sponsored by Adobe, PG&E, AoPS, & Wolfram",
-      "Managed $100,000 club funds to establish the first maker space at my high school"
     ],
     skills: ["Leadership", "Project Management", "Fundraising"]
   },
@@ -81,7 +81,7 @@ const workHistory: WorkHistoryType = {
     position: "Leadership Council",
     duration: "Sept 2018 - Sept 2022",
     achievements: [
-      "650+ hours of teaching Java & Python weekly to a total of 60 kids; 1 of 2 teenage mentors out of 90+ adults",
+      "650+ hours of teaching Python weekly to a total of 60 kids; 1 of 2 teenage mentors out of 90+ adults",
       "Oversaw 14,000+ students, managed $28,000 in club finances, led switch to virtual learning"
     ],
     skills: ["Teaching", "Java", "Python", "Leadership", "Financial Management"]
