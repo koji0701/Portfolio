@@ -39,7 +39,7 @@ function App() {
                 <About />
                 <Work />
                 <Projects />
-                <FavoriteSongs />
+                {/* <FavoriteSongs /> */}
                 {/* <Skills /> */}
               </>
             } />
