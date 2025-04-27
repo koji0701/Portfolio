@@ -7,6 +7,8 @@ import Work from './components/sections/Work';
 import About from './components/sections/about';
 import { SparklesCore } from './components/ui/sparkles';
 import { BackgroundBeamsWithCollision } from './components/ui/background-beams-with-collision';
+import { FavoriteSongs } from './components/sections/FavoriteSongs';
+
 
 function App() {
   return (
@@ -37,6 +39,7 @@ function App() {
                 <About />
                 <Work />
                 <Projects />
+                <FavoriteSongs />
                 {/* <Skills /> */}
               </>
             } />
