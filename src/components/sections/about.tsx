@@ -1,7 +1,7 @@
 import { TextReveal } from "../ui/aceternity";
 export default function About() {
   return (
-    <section className="relative py-10" id="about">
+    <section className="relative py-10 w-full" id="about">
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto">
         <TextReveal>

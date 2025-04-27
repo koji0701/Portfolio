@@ -29,7 +29,7 @@ function App() {
         </div>
         
         {/* Main content with higher z-index */}
-        <div className="relative z-10">
+        <div className="relative z-10 w-full">
           <Routes>
             <Route path="/" element={
               <>

@@ -78,3 +78,32 @@ body {
   margin: 0 auto;
   padding: 0; /* Ensure no padding */
 }
+
+/* Ensure container elements take full width */
+.max-w-4xl, .max-w-6xl, .max-w-7xl {
+  width: 100%;
+  max-width: 100% !important; /* Override any Tailwind max-width */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .max-w-4xl {
+    max-width: 56rem !important; /* 896px */
+  }
+  
+  .max-w-6xl {
+    max-width: 72rem !important; /* 1152px */
+  }
+  
+  .max-w-7xl {
+    max-width: 80rem !important; /* 1280px */
+  }
+}
+
+/* Fix for Vercel deployment */
+#__next, #__vercel {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
