@@ -13,7 +13,7 @@ export default function About() {
         <div className="space-y-6 text-neutral-300">
           <TextReveal>
             <p className="text-lg leading-relaxed">
-              Hi! I'm Koji, a Computer Science, Mathematics, & Biomedical Data Science student at Washington University in St. Louis. I'm an avid builder passionate about developing innovative public-interest technology. 
+              Hi! I'm Koji, a Computer Science, Mathematics, & Biomedical Data Science student at Washington University in St. Louis. I'm an avid developer passionate about developing innovative public-interest technology. 
             </p>
           </TextReveal>
 
