@@ -1,104 +1,105 @@
 import { TextReveal } from "../ui/aceternity";
 import { LitCard } from "../ui/lit-card";
-import { SparklesCore } from "../ui/sparkles";
 
 const projects = [
   {
     title: "Intern-X",
-    description: "Llama-powered platform for connecting students with internships, recruiters & alumni. 2nd @ WashU Meta x Llama Hackathon",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2370&auto=format&fit=crop",
+    description: "Llama-powered platform connecting students with internships, recruiters & alumni. 2nd @ WashU Meta x Llama Hackathon.",
+    // image: "...", // Removed
     link: "https://github.com/Intern-X",
     awardWinning: true
   },
   {
     title: "UnveilAI",
-    description: "Developer tool for onboarding to new codebases. Finalist @ Google DevFest Hackathon",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2532&auto=format&fit=crop",
+    description: "Developer tool for rapid onboarding to new codebases. Finalist @ Google DevFest Hackathon.",
+    // image: "...", // Removed
     link: "https://github.com/UnveilAI",
     awardWinning: true
   },
   {
     title: "Bear Eats",
-    description: "Macro tracker & meal planning iOS app for WashU dining. 1st @ Hack WashU health & fitness track",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
+    description: "Macro tracker & meal planning iOS app for WashU dining. 1st @ Hack WashU health & fitness track.",
+    // image: "...", // Removed
     link: "https://github.com/koji0701/BearEats",
     awardWinning: true
   },
   {
     title: "GameUpGPT",
-    description: "AI-powered iMessage extension to help you 'game up'",
-    image: "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?q=80&w=2674&auto=format&fit=crop",
+    description: "AI-powered iMessage extension to craft the perfect reply and 'game up' your conversations.",
+    // image: "...", // Removed
     link: "https://github.com/koji0701/GameUpGPT",
     awardWinning: false
   },
   {
     title: "Issho",
-    description: "Strava for student productivity. Track your productivity, give or send a thumbs up for completing work, & get your work done",
-    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2370&auto=format&fit=crop",
+    description: "Social productivity app inspired by Strava. Track your work, share progress, and motivate with friends.",
+    // image: "...", // Removed
     link: "https://github.com/koji0701/Issho",
     awardWinning: false
   },
   {
     title: "Community of Hope",
-    description: "Mobile app that connects St. Louis community mentors with teenage moms; built for Community of Hope nonprofit",
-    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2371&auto=format&fit=crop",
+    description: "Mobile app connecting St. Louis community mentors with teenage moms, built for a local nonprofit.",
+    // image: "...", // Removed
     link: "https://github.com/SamLubelsky/CommunityOfHope",
     awardWinning: false
   },
   {
     title: "GetWashU",
-    description: "A 2048 game variant inspired by GetMIT",
-    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2371&auto=format&fit=crop",
+    description: "A 2048-style puzzle game with a WashU twist, inspired by the popular GetMIT game.",
+    // image: "...", // Removed
     link: "https://github.com/koji0701/GetWashU",
     awardWinning: false
   },
-  
   {
     title: "ParkourIsland",
-    description: "2D platformer game",
-    image: "https://images.unsplash.com/photo-1596662450730-384b8902ba8b?q=80&w=2525&auto=format&fit=crop",
+    description: "Classic 2D platformer game challenging players with intricate levels and agile movements.",
+    // image: "...", // Removed
     link: "https://github.com/koji0701/ParkourIsland",
     awardWinning: false
   },
   {
     title: "DuetGame",
-    description: "Web version of the popular mobile game Duet",
-    image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2670&auto=format&fit=crop",
+    description: "Web-based adaptation of the popular mobile game Duet, testing reflex and coordination.",
+    // image: "...", // Removed
     link: "https://github.com/koji0701/DuetGame",
     awardWinning: false
   },
-  
   {
-    title: "Portfolio",
-    description: "It's this website",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2372&auto=format&fit=crop",
+    title: "This Portfolio",
+    description: "The very site you're exploring now, built with React, TypeScript, Tailwind, and Framer Motion.",
+    // image: "...", // Removed
     link: "https://github.com/koji0701/Portfolio",
     awardWinning: false
   }
 ];
+
 export default function Projects() {
   return (
-    <section className="py-10 relative w-full" id="projects">
-      {/* Content with relative positioning */}
+    <section className="relative py-20 md:py-28 w-full" id="projects">
+      <div 
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage: 'radial-gradient(circle at 50% 0%, rgba(128, 0, 128, 0.1), transparent 50%), radial-gradient(circle at 50% 100%, rgba(76, 29, 149, 0.1), transparent 50%)',
+        }}
+      />
+
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         <TextReveal>
-          <h1 className="text-4xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-neutral-100 to-neutral-400">
-            Featured Projects
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-neutral-100 via-purple-300 to-pink-300">
+            Things I've Built
           </h1>
         </TextReveal>
 
-        {/* Grid Container */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 md:gap-y-12 justify-items-center"> {/* Slightly reduced gap-y for smallest screens */}
           {projects.map((project, index) => (
-            <div key={index} className="flex justify-center">
-              <LitCard
-                title={project.title}
-                description={project.description}
-                image={project.image}
-                link={project.link}
-                awardWinning={project.awardWinning}
-              />
-            </div>
+            <LitCard
+              key={index}
+              title={project.title}
+              description={project.description}
+              link={project.link}
+              awardWinning={project.awardWinning}
+            />
           ))}
         </div>
       </div>

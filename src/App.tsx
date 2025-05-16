@@ -21,11 +21,11 @@ function App() {
             <SparklesCore
               id="app-sparkles"
               className="w-full h-full"
-              particleDensity={40}
+              particleDensity={30} // Slightly reduced density
               particleColor="#FFFFFF"
-              speed={0.3}
-              minSize={0.8}
-              maxSize={1.2}
+              speed={0.2} // Slightly slower speed
+              minSize={0.5} // Smaller min size
+              maxSize={1.0} // Smaller max size
             />
           </div>
         </div>
@@ -39,8 +39,8 @@ function App() {
                 <About />
                 <Work />
                 <Projects />
-                {/* <FavoriteSongs /> */}
-                {/* <Skills /> */}
+                <FavoriteSongs />
+                <Skills />
               </>
             } />
           </Routes>

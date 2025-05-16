@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { SongCard } from '../ui/song-card';
+import { TextReveal } from '../ui/aceternity'; // Import TextReveal
 
-// Sample data for favorite songs
+// Sample data for favorite songs (remains the same)
 const favoriteSongs = [
   {
     title: "Glimpse of Us",
@@ -44,73 +45,71 @@ const favoriteSongs = [
 
 export const FavoriteSongs: React.FC = () => {
   const containerRef = useRef(null);
+  // Note: The scroll-linked animations (opacity, yTransform) might conflict with
+  // the fixed background if this section is very long. For now, let's keep them
+  // but be mindful of overall page scroll performance and visual consistency.
+  // If issues arise, these could be simplified or replaced with whileInView animations.
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"] 
   });
   
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
-  const yTransform = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [100, 0, 0, 100]);
+  // Adjusted transform ranges for a more subtle effect
+  const opacity = useTransform(scrollYProgress, [0, 0.15, 0.85, 1], [0, 1, 1, 0]);
+  const yTransform = useTransform(scrollYProgress, [0, 0.15, 0.85, 1], [50, 0, 0, -50]);
   
   return (
     <section 
       id="favorite-songs" 
-      className="relative min-h-screen w-full py-20 overflow-hidden"
+      className="relative w-full py-20 md:py-28 overflow-hidden" // Increased padding
       ref={containerRef}
     >
-      {/* Background effect */}
-      {/* <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 to-black/50 backdrop-blur-2xl" /> */}
+      {/* Optional: Subtle background gradient for this section */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black via-purple-950/30 to-black" />
       
-      {/* Content container */}
       <motion.div 
         className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         style={{ opacity, y: yTransform }}
       >
-        <div className="mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-            Current Favorites
+        <TextReveal>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-orange-400">
+            Current Jams
           </h2>
-
-        </div>
+        </TextReveal>
         
-        {/* Music visualizer animation */}
-        <div className="absolute top-40 left-1/2 transform -translate-x-1/2 flex space-x-1 mb-8">
-          {[...Array(20)].map((_, i) => (
+        {/* Music visualizer animation - kept for visual flair */}
+        {/* Consider making its position relative to the title or removing if too busy */}
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full flex space-x-1.5 mb-8 opacity-50 group-hover:opacity-100 transition-opacity">
+          {[...Array(15)].map((_, i) => ( // Reduced count
             <motion.div
               key={i}
-              className="w-1 bg-gradient-to-t from-purple-500 to-pink-500 rounded-full"
+              className="w-1.5 bg-gradient-to-t from-purple-600 to-pink-600 rounded-full" // Thicker bars
               animate={{
-                height: [5, 15, 30, 20, 5],
-                opacity: [0.5, 0.8, 1, 0.8, 0.5]
+                height: [4, 12, 24, 16, 4], // Adjusted heights
+                opacity: [0.4, 0.7, 1, 0.7, 0.4]
               }}
               transition={{
-                duration: 1.5,
+                duration: 1.8, // Slightly slower
                 repeat: Infinity,
-                delay: i * 0.1,
+                delay: i * 0.12,
                 ease: "easeInOut"
               }}
             />
           ))}
         </div>
         
-        {/* Song grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 justify-items-center">
           {favoriteSongs.map((song, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="flex justify-center"
-            >
-              <SongCard
-                title={song.title}
-                artist={song.artist}
-                albumCover={song.albumCover}
-                spotifyLink={song.spotifyLink}
-              />
-            </motion.div>
+            // The SongCard itself now has whileInView, so this outer motion.div might be redundant
+            // unless used for a staggered effect NOT handled by the card.
+            // For simplicity, we can rely on SongCard's internal animation.
+            <SongCard
+              key={index} // Ensure key is on the direct mapped element
+              title={song.title}
+              artist={song.artist}
+              albumCover={song.albumCover}
+              spotifyLink={song.spotifyLink}
+            />
           ))}
         </div>
       </motion.div>

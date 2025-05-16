@@ -6,6 +6,10 @@
   html {
     font-family: 'Clash Grotesk', sans-serif;
   }
+  ::selection {
+    background-color: #7c3aed; /* purple-600 */
+    color: white;
+  }
 }
 
 /* Ensure black background on all root elements */
@@ -71,35 +75,68 @@ body {
   }
 }
 
-/* Container class */
+/* Container class - This is a general approach, Tailwind's mx-auto and max-w classes are preferred */
 .container {
   width: 100%;
-  max-width: 1280px; /* or whatever your design requires */
-  margin: 0 auto;
-  padding: 0; /* Ensure no padding */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* Default padding */
+  padding-right: 1rem; /* Default padding */
 }
 
-/* Ensure container elements take full width */
+@media (min-width: 640px) { /* sm */
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) { /* md */
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) { /* lg */
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) { /* xl */
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) { /* 2xl */
+  .container {
+    max-width: 1536px;
+  }
+}
+
+/* Adjust Tailwind max-width classes to ensure content has padding but backgrounds can be full-width */
 .max-w-4xl, .max-w-6xl, .max-w-7xl {
   width: 100%;
-  max-width: 100% !important; /* Override any Tailwind max-width */
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.5rem; /* Slightly more padding for larger sections */
+  padding-right: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .max-w-4xl { max-width: 42rem !important; } /* sm: 672px */
+  .max-w-6xl { max-width: 48rem !important; } /* sm: 768px */
+  .max-w-7xl { max-width: 56rem !important; } /* sm: 896px */
 }
 
 @media (min-width: 768px) {
-  .max-w-4xl {
-    max-width: 56rem !important; /* 896px */
-  }
-  
-  .max-w-6xl {
-    max-width: 72rem !important; /* 1152px */
-  }
-  
-  .max-w-7xl {
-    max-width: 80rem !important; /* 1280px */
-  }
+  .max-w-4xl { max-width: 48rem !important; } /* md: 768px */
+  .max-w-6xl { max-width: 64rem !important; } /* md: 1024px */
+  .max-w-7xl { max-width: 72rem !important; } /* md: 1152px */
 }
+
+@media (min-width: 1024px) {
+  .max-w-4xl { max-width: 56rem !important; } /* lg: 896px */
+  .max-w-6xl { max-width: 72rem !important; } /* lg: 1152px */
+  .max-w-7xl { max-width: 80rem !important; } /* lg: 1280px */
+}
+
 
 /* Fix for Vercel deployment */
 #__next, #__vercel {
