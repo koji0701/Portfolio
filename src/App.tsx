@@ -8,7 +8,7 @@ import About from './components/sections/about';
 import { SparklesCore } from './components/ui/sparkles';
 import { BackgroundBeamsWithCollision } from './components/ui/background-beams-with-collision';
 import { FavoriteSongs } from './components/sections/FavoriteSongs';
-
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -45,6 +45,7 @@ function App() {
             } />
           </Routes>
         </div>
+        <Analytics />
       </div>
     </BrowserRouter>
   );
